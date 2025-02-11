@@ -1,0 +1,16 @@
+{
+  "name": "Full name is required!",
+  "subject": "Subject is required!",
+  "messageForm": "Message is required!",
+  "email": "Email is required!",
+  "emailValid": "Email must be a valid email address!",
+  "title": "Feel free to contact us.",
+  "description": "We'll be glad to hear from you buddy",
+  "fullName": "Full name",
+  "emailName": "Email",
+  "subjectName": "Subject",
+  "messageName": "Message",
+  "send": "Send request",
+  "team": "Your message has been successfully sent to our team.",
+  "newMessage": "New Message"
+}

@@ -1,0 +1,54 @@
+{
+  "terms": {
+    "title": "Şartlar ve Koşullar",
+    "lastUpdated": "Son Güncelleme: Ocak 2024",
+    "sections": {
+      "acceptance": {
+        "title": "1. Şartların Kabulü",
+        "content": "Bu web sitesine erişerek ve kullanarak, bu sözleşmenin şartlarını ve hükümlerini kabul etmiş olursunuz."
+      },
+      "services": {
+        "title": "2. Hizmetlerin Tanımı",
+        "content": "Web3 Wanderers, blockchain eğitimi, danışmanlık ve geliştirme hizmetleri sunmaktadır. Herhangi bir hizmeti önceden bildirmeksizin değiştirme veya sonlandırma hakkını saklı tutarız."
+      },
+      "userConduct": {
+        "title": "3. Kullanıcı Davranışı",
+        "content": "Hizmetlerimizi yalnızca yasal amaçlar için ve bu Şartlar doğrultusunda kullanmayı kabul edersiniz. Hesabınızın gizliliğini korumaktan siz sorumlusunuz."
+      },
+      "intellectualProperty": {
+        "title": "4. Fikri Mülkiyet",
+        "content": "Bu web sitesindeki metin, grafik, logo ve yazılım dahil tüm içerik Web3 Wanderers'ın mülkiyetindedir ve fikri mülkiyet yasaları tarafından korunmaktadır."
+      },
+      "limitation": {
+        "title": "5. Sorumluluk Sınırlaması",
+        "content": "Web3 Wanderers, hizmetlerimizin kullanımından kaynaklanan dolaylı, arızi, özel, sonuç olarak ortaya çıkan veya cezai zararlardan sorumlu tutulamaz."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Gizlilik Politikası",
+    "lastUpdated": "Son Güncelleme: Ocak 2024",
+    "sections": {
+      "collection": {
+        "title": "1. Bilgi Toplama",
+        "content": "Hizmetlerimizi kullanırken bize doğrudan sağladığınız ad, e-posta adresi ve diğer iletişim bilgileri dahil olmak üzere bilgileri topluyoruz."
+      },
+      "usage": {
+        "title": "2. Bilgi Kullanımı",
+        "content": "Toplanan bilgileri hizmetlerimizi sağlamak ve iyileştirmek, sizinle iletişim kurmak ve yasal yükümlülüklere uymak için kullanıyoruz."
+      },
+      "sharing": {
+        "title": "3. Bilgi Paylaşımı",
+        "content": "Kişisel bilgilerinizi satmıyor veya kiralamıyoruz. Bilgilerinizi, web sitemizin işletilmesine yardımcı olan güvenilir hizmet sağlayıcılarla paylaşabiliriz."
+      },
+      "security": {
+        "title": "4. Veri Güvenliği",
+        "content": "Kişisel bilgilerinizi yetkisiz erişim, değiştirme veya yok edilmeye karşı korumak için uygun güvenlik önlemleri uyguluyoruz."
+      },
+      "cookies": {
+        "title": "5. Çerez Politikası",
+        "content": "Web sitemizdeki deneyiminizi geliştirmek için çerezler kullanıyoruz. Tarayıcınızı çerezleri reddetmek üzere ayarlayabilirsiniz, ancak bu bazı özellikleri kullanma yeteneğinizi sınırlayabilir."
+      }
+    }
+  }
+} 

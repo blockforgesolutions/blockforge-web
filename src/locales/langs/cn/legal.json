@@ -1,0 +1,54 @@
+{
+  "terms": {
+    "title": "条款和条件",
+    "lastUpdated": "最后更新：2024年1月",
+    "sections": {
+      "acceptance": {
+        "title": "1. 条款接受",
+        "content": "通过访问和使用本网站，您接受并同意受本协议条款和规定的约束。"
+      },
+      "services": {
+        "title": "2. 服务说明",
+        "content": "Web3 Wanderers提供区块链教育、咨询和开发服务。我们保留在不通知的情况下修改或终止任何服务的权利。"
+      },
+      "userConduct": {
+        "title": "3. 用户行为",
+        "content": "您同意仅将我们的服务用于合法目的，并遵守这些条款。您负责维护您账户的机密性。"
+      },
+      "intellectualProperty": {
+        "title": "4. 知识产权",
+        "content": "本网站上的所有内容，包括文本、图形、标志和软件，均为Web3 Wanderers的财产，受知识产权法保护。"
+      },
+      "limitation": {
+        "title": "5. 责任限制",
+        "content": "Web3 Wanderers不对因使用我们的服务而导致的任何间接、附带、特殊、后果性或惩罚性损害承担责任。"
+      }
+    }
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新：2024年1月",
+    "sections": {
+      "collection": {
+        "title": "1. 信息收集",
+        "content": "我们收集您在使用我们的服务时直接提供给我们的信息，包括姓名、电子邮件地址和其他联系方式。"
+      },
+      "usage": {
+        "title": "2. 信息使用",
+        "content": "我们使用收集的信息来提供和改进我们的服务，与您沟通，并遵守法律义务。"
+      },
+      "sharing": {
+        "title": "3. 信息共享",
+        "content": "我们不出售或出租您的个人信息。我们可能与帮助运营我们网站的可信服务提供商共享您的信息。"
+      },
+      "security": {
+        "title": "4. 数据安全",
+        "content": "我们实施适当的安全措施，以保护您的个人信息免受未经授权的访问、更改或销毁。"
+      },
+      "cookies": {
+        "title": "5. Cookie政策",
+        "content": "我们使用cookie来改善您在我们网站上的体验。您可以设置浏览器拒绝cookie，但这可能会限制您使用某些功能的能力。"
+      }
+    }
+  }
+} 

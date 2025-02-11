@@ -1,0 +1,16 @@
+{
+  "name": "Le nom complet est requis!",
+  "subject": "Le sujet est requis!",
+  "messageForm": "Le message est requis!",
+  "email": "L'email est requis!",
+  "emailValid": "L'email doit être une adresse valide!",
+  "title": "N'hésitez pas à nous contacter.",
+  "description": "Nous serons ravis de vous entendre, mon ami",
+  "fullName": "Nom complet",
+  "emailName": "Email",
+  "subjectName": "Sujet",
+  "messageName": "Message",
+  "send": "Envoyer la demande",
+  "team": "Votre message a été envoyé avec succès à notre équipe.",
+  "newMessage": "Nouveau message"
+}

@@ -1,0 +1,54 @@
+{
+  "terms": {
+    "title": "Conditions Générales",
+    "lastUpdated": "Dernière mise à jour : Janvier 2024",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptation des Conditions",
+        "content": "En accédant et en utilisant ce site web, vous acceptez d'être lié par les termes et dispositions de cet accord."
+      },
+      "services": {
+        "title": "2. Description des Services",
+        "content": "Web3 Wanderers fournit des services d'éducation, de conseil et de développement blockchain. Nous nous réservons le droit de modifier ou d'interrompre tout service sans préavis."
+      },
+      "userConduct": {
+        "title": "3. Conduite de l'Utilisateur",
+        "content": "Vous acceptez d'utiliser nos services uniquement à des fins légales et conformément à ces Conditions. Vous êtes responsable de la confidentialité de votre compte."
+      },
+      "intellectualProperty": {
+        "title": "4. Propriété Intellectuelle",
+        "content": "Tout le contenu de ce site web, y compris le texte, les graphiques, les logos et les logiciels, est la propriété de Web3 Wanderers et est protégé par les lois sur la propriété intellectuelle."
+      },
+      "limitation": {
+        "title": "5. Limitation de Responsabilité",
+        "content": "Web3 Wanderers ne sera pas responsable des dommages indirects, accessoires, spéciaux, consécutifs ou punitifs résultant de votre utilisation de nos services."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour : Janvier 2024",
+    "sections": {
+      "collection": {
+        "title": "1. Collecte d'Informations",
+        "content": "Nous collectons les informations que vous nous fournissez directement lors de l'utilisation de nos services, y compris le nom, l'adresse e-mail et autres coordonnées."
+      },
+      "usage": {
+        "title": "2. Utilisation des Informations",
+        "content": "Nous utilisons les informations collectées pour fournir et améliorer nos services, communiquer avec vous et respecter les obligations légales."
+      },
+      "sharing": {
+        "title": "3. Partage d'Informations",
+        "content": "Nous ne vendons ni ne louons vos informations personnelles. Nous pouvons partager vos informations avec des prestataires de services de confiance qui nous aident à exploiter notre site web."
+      },
+      "security": {
+        "title": "4. Sécurité des Données",
+        "content": "Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos informations personnelles contre l'accès, la modification ou la destruction non autorisés."
+      },
+      "cookies": {
+        "title": "5. Politique des Cookies",
+        "content": "Nous utilisons des cookies pour améliorer votre expérience sur notre site web. Vous pouvez configurer votre navigateur pour refuser les cookies, mais cela peut limiter votre capacité à utiliser certaines fonctionnalités."
+      }
+    }
+  }
+} 

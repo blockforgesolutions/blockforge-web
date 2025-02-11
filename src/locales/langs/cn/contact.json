@@ -1,0 +1,16 @@
+{
+  "name": "需要全名！",
+  "subject": "主题是必填项！",
+  "messageForm": "消息是必填项！",
+  "email": "需要电子邮件！",
+  "emailValid": "电子邮件必须是有效的电子邮件地址！",
+  "title": "随时联系我们。",
+  "description": "我们很高兴听到您的消息，朋友",
+  "fullName": "全名",
+  "emailName": "电子邮件",
+  "subjectName": "主题",
+  "messageName": "消息",
+  "send": "发送请求",
+  "team": "您的消息已成功发送到我们的团队。",
+  "newMessage": "新消息"
+}

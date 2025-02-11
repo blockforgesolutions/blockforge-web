@@ -1,0 +1,16 @@
+{
+  "name": "Tam ad gereklidir!",
+  "subject": "Konu gereklidir!",
+  "messageForm": "Mesaj gereklidir!",
+  "email": "E-posta gereklidir!",
+  "emailValid": "E-posta geçerli bir e-posta adresi olmalıdır!",
+  "title": "İletişime geçmekten çekinmeyin.",
+  "description": "Sizden haber almayı çok isteriz.",
+  "fullName": "Tam ad",
+  "emailName": "E-posta",
+  "subjectName": "Konu",
+  "messageName": "Mesaj",
+  "send": "Talebi gönder",
+  "team": "Mesajınız ekibimize başarıyla gönderildi.",
+  "newMessage": "Yeni Mesaj"
+}
