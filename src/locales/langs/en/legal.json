@@ -9,7 +9,7 @@
       },
       "services": {
         "title": "2. Description of Services",
-        "content": "Web3 Wanderers provides blockchain education, consulting, and development services. We reserve the right to modify or discontinue any service without notice."
+        "content": "BlockForge Solutions provides blockchain education, consulting, and development services. We reserve the right to modify or discontinue any service without notice."
       },
       "userConduct": {
         "title": "3. User Conduct",
@@ -17,11 +17,11 @@
       },
       "intellectualProperty": {
         "title": "4. Intellectual Property",
-        "content": "All content on this website, including text, graphics, logos, and software, is the property of Web3 Wanderers and is protected by intellectual property laws."
+        "content": "All content on this website, including text, graphics, logos, and software, is the property of BlockForge Solutionsand is protected by intellectual property laws."
       },
       "limitation": {
         "title": "5. Limitation of Liability",
-        "content": "Web3 Wanderers shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services."
+        "content": "BlockForge Solutions shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services."
       }
     }
   },
@@ -51,4 +51,4 @@
       }
     }
   }
-} 
+}

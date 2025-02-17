@@ -42,8 +42,8 @@ const LINKS = [
     headline: 'contact',
     children: [
       {
-        name: 'info@web3wanderers.com',
-        href: 'mailto:info@web3wanderers.com'
+        name: 'info@blockforgesolutions.com',
+        href: 'mailto:info@blockforgesolutions.com'
       }
     ]
   },
@@ -72,7 +72,7 @@ export function Footer({ layoutQuery, sx }: FooterProps) {
           [theme.breakpoints.up(layoutQuery)]: { textAlign: 'unset' },
         }}
       >
-        <Logo />
+        <Logo isSingle={false} />
 
         <Grid
           container
