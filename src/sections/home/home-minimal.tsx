@@ -37,8 +37,8 @@ export function HomeMinimal({ sx, ...other }: BoxProps) {
     <>
       <SectionTitle
         caption={t('homeMinimalCaption')}
-        title="Web3"
-        txtGradient="Wanderers"
+        title={t('minTitle')}
+        txtGradient={t('minGradient')}
         sx={{ mb: { xs: 5, md: 8 }, textAlign: { xs: 'center', md: 'left' } }}
       />
 
