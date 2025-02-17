@@ -1,7 +1,7 @@
 import { cache } from 'react';
 import { createInstance } from 'i18next';
-import { cookies as getCookies } from 'next/headers';
 import resourcesToBackend from 'i18next-resources-to-backend';
+import { headers, cookies as getCookies } from 'next/headers';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
 import { defaultNS, cookieName, i18nOptions, fallbackLng } from './config-locales';
@@ -16,12 +16,34 @@ import type { LanguageValue } from './config-locales';
  *
  * Use i18next with app folder and without locale in url:
  * https://github.com/i18next/next-app-dir-i18next-example/issues/12#issuecomment-1500917570
- */
+
 
 export async function detectLanguage() {
   const cookies = getCookies();
 
   const language = cookies.get(cookieName)?.value ?? fallbackLng;
+
+  return language as LanguageValue;
+}
+
+ */
+export async function detectLanguage() {
+  const cookies = getCookies();
+
+  // Sunucu tarafında hostname'i headers() ile alalım
+  const headersList = headers();
+  const host = headersList.get('host');
+
+  // Domain'e göre dil seçimi
+  let language;
+
+  if (host?.includes('web3wanderers.com')) {
+    language = 'tr'; // Türkçe varsayılan dil
+  } else if (host?.includes('blockforgesolutions.com')) {
+    language = 'en'; // Çerezdeki dil veya varsayılan İngilizce
+  } else {
+    language = fallbackLng; // Fallback dil
+  }
 
   return language as LanguageValue;
 }

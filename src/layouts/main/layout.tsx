@@ -102,7 +102,7 @@ export function MainLayout({ sx, data, children, header }: MainLayoutProps) {
                   {/* -- Theme Switcher Button -- */}
                   <ThemeSwitcher />
                   {/* -- Sign in button -- *  <SignInButton /> */}
-                  <LanguagePopover data={allLangs} />
+                  {/* <LanguagePopover data={allLangs} /> */}
                   {/* -- Purchase button -- *  <Button
                     variant="contained"
                     rel="noopener"
