@@ -75,7 +75,7 @@ export const Logo = forwardRef<HTMLDivElement, LogoProps>(
         height="100%"
       >
         <Typography variant="h3" fontWeight="bold" textAlign="center">
-          Block Forge
+          BlockForge
         </Typography>
       </Box>);
 
