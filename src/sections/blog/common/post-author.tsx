@@ -12,11 +12,14 @@ import { IAuthorProps } from 'src/types/author';
 // ----------------------------------------------------------------------
 
 type Props = {
-  author: IAuthorProps;
+  author: {
+    name: string,
+    avatarUrl: string
+  };
 };
 
 export default function PostAuthor({ author }: Props) {
-  const { name, role, about, quotes, avatarUrl } = author;
+  const { name, avatarUrl } = author;
 
   return (
     <Stack
@@ -38,9 +41,6 @@ export default function PostAuthor({ author }: Props) {
           <Stack spacing={0.5}>
             <Typography variant="h5">{name}</Typography>
 
-            <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              {role}
-            </Typography>
           </Stack>
 
           <Stack direction="row">
@@ -52,13 +52,13 @@ export default function PostAuthor({ author }: Props) {
           </Stack>
         </Stack>
 
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        {/* <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           {about}
         </Typography>
 
         <Typography variant="caption" sx={{ color: 'text.disabled' }}>
           {quotes}
-        </Typography>
+        </Typography> */}
       </Stack>
     </Stack>
   );

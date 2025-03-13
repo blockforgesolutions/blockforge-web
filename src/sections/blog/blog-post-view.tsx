@@ -17,7 +17,7 @@ import { paths } from 'src/routes/paths';
 
 import { fDate } from 'src/utils/format-time';
 
-import { _socials, _marketingPosts } from 'src/_mock';
+import { _socials, blogPosts, _marketingPosts } from 'src/_mock';
 
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
@@ -33,7 +33,7 @@ import LatestPosts from './common/latest-posts';
 
 export default function BlogPostView() {
   const { title, description, duration, createdAt, author, favorited, heroUrl, tags, content } =
-    _marketingPosts[0];
+    blogPosts[0];
 
   const formattedPosts = _marketingPosts.map((post) => ({
     ...post,
@@ -65,7 +65,7 @@ export default function BlogPostView() {
           sx={{ my: 3 }}
           links={[
             { name: 'Home', href: '/' },
-            { name: 'Blog', href: paths.post.details(title) },
+            { name: 'Blog', href: paths.post.root },
             { name: title },
           ]}
         />
