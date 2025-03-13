@@ -18,8 +18,16 @@ export type IBlogPostProps = {
   createdAt: Date;
   coverUrl: string;
   duration: string;
+  content: string;
   favorited: boolean;
   description: string;
-  author: IAuthorProps;
-  shareLinks?: ISocialLinks;
+  author: {
+    name: string;
+    avatarUrl: string;
+  };
+  shareLinks?: {
+    facebook: string;
+    twitter: string;
+    linkedin: string;
+  };
 };
