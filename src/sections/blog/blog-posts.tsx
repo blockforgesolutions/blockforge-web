@@ -23,6 +23,9 @@ export default function BlogPosts({ posts }: Props) {
             xs: 'repeat(1, 1fr)',
             sm: 'repeat(2, 1fr)',
           },
+          '& > div': {
+            height: { xs: 400, md: 480 },
+          }
         }}
       >
         {posts.slice(0, 8).map((post) => (

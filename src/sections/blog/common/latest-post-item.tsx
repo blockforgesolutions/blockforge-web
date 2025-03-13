@@ -10,12 +10,12 @@ import { RouterLink } from 'src/routes/components';
 
 import { fDate } from 'src/utils/format-time';
 
-import TextMaxLine from 'src/components/text-max-line';
+import { Image } from 'src/components/image';
 import { varHover, varTranHover } from 'src/components/animate';
 
 import { IBlogPostProps } from 'src/types/blog';
-import { Image } from 'src/components/image';
-import PostTimeBlock from './common/post-time-block';
+
+import PostTimeBlock from './post-time-block';
 
 // ----------------------------------------------------------------------
 
@@ -23,29 +23,27 @@ type Props = {
   post: IBlogPostProps;
 };
 
-export default function BlogPostItem({ post }: Props) {
+export default function LatestPostItem({ post }: Props) {
   const theme = useTheme();
 
   return (
     <Stack
       component={m.div}
       whileHover="hover"
-      variants={varHover(1)}
-      transition={varTranHover()}
-      sx={{ borderRadius: 2, overflow: 'hidden', position: 'relative',}}
+      sx={{
+        borderRadius: 2,
+        overflow: 'hidden',
+        position: 'relative',
+        boxShadow: theme.customShadows.z12,
+      }}
     >
-      <m.div variants={varHover(1.25)} transition={varTranHover()} style={{ height: '100%' }}>
+      <m.div variants={varHover(1.25)} transition={varTranHover()}>
         <Image
           src={post.coverUrl}
           alt={post.title}
           ratio="3/4"
-          sx={{
-            width: 1,
-            height: 1,
-          }}
-          // overlay={`linear-gradient(to top, ${alpha(theme.palette.common.black, 0)} 0%, ${
-          //   theme.palette.common.black
-          // } 75%)`}
+          // overlay={`linear-gradient(to top, ${alpha(theme.palette.common.black, 0)} 0%, ${theme.palette.common.black
+          //   } 75%)`}
         />
       </m.div>
 
@@ -53,6 +51,7 @@ export default function BlogPostItem({ post }: Props) {
         justifyContent="space-between"
         sx={{
           p: 5,
+          width: 1,
           height: 1,
           zIndex: 9,
           position: 'absolute',
@@ -61,13 +60,19 @@ export default function BlogPostItem({ post }: Props) {
       >
         <Stack spacing={2}>
           <PostTimeBlock
+            createdAt={fDate(post.createdAt) || ""}
             duration={post.duration}
-            createdAt={fDate(post.createdAt) ||""}
             sx={{ color: 'inherit', opacity: 0.72 }}
           />
 
-          <Link component={RouterLink} href={paths.post.details(post.title)} sx={{ color: 'common.white' }}>
-            <TextMaxLine variant="h4">{post.title}</TextMaxLine>
+          <Link
+            component={RouterLink}
+            href={paths.post.details(post.title)}
+            variant="h4"
+            color="inherit"
+            underline="none"
+          >
+            {post.title}
           </Link>
         </Stack>
 

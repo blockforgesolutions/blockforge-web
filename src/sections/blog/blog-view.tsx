@@ -2,10 +2,11 @@
 
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
-import { _marketingPosts } from 'src/_mock';
+import { _categories, _marketingPosts, _tags } from 'src/_mock';
 import FeaturedPost from './featured-blogs';
 import PostSearchMobile from './common/post-search-mobile';
 import BlogPosts from './blog-posts';
+import PostSidebar from './common/post-sidebar';
 
 
 // ----------------------------------------------------------------------
@@ -23,23 +24,19 @@ export default function BlogView() {
         }}
       >
         <Grid container columnSpacing={{ xs: 0, md: 8 }}>
-          {/* <Grid xs={12} md={8}>
-            <BlogPosts posts={_marketingPosts.slice(0, 5).map(post => ({ ...post, createdAt: new Date(post.createdAt) }))}  />
-          </Grid> */}
+          <Grid xs={12} md={8}>
+            <BlogPosts posts={_marketingPosts.slice(0, 5).map(post => ({ ...post, createdAt: new Date(post.createdAt) }))} />
+          </Grid>
 
-          {/* <Grid xs={12} md={4}>
+          <Grid xs={12} md={4}>
             <PostSidebar
               popularTags={_tags}
               categories={_categories}
-              recentPosts={{ list: _marketingPosts.slice(-4) }}
-              advertisement={{
-                title: 'Advertisement',
-                description: 'Duis leo. Donec orci lectus, aliquam ut, faucibus non',
-                imageUrl: _mock.image.marketing(9),
-                path: '',
+              recentPosts={{
+                list: _marketingPosts.slice(-4).map(post => ({ ...post, createdAt: new Date(post.createdAt) })),
               }}
             />
-          </Grid> */}
+          </Grid>
         </Grid>
       </Container>
       {/* <MarketingLandingFreeSEO />

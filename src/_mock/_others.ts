@@ -113,23 +113,32 @@ export const _socials = [
     value: 'instagram',
     label: 'Instagram',
     path: 'https://www.instagram.com/web3_wanderers',
+    icon: 'ant-design:instagram-filled',
+    color: '#E1306C',
   },
   {
     value: 'linkedin',
     label: 'Linkedin',
     path: 'https://www.linkedin.com/company/web3-wanderers/',
+    icon: 'ant-design:linkedin-filled',
+    color: '#0077B5',
   },
   {
     value: 'twitter',
     label: 'Twitter',
     path: 'https://x.com/web3wanderers1',
+    icon: 'ant-design:twitter-circle-filled',
+    color: '#1DA1F2',
   },
   {
-    value: 'facebook',
+    value: 'youtube',
     label: 'Youtube',
     path: 'https://www.youtube.com/@Web3Wanderer',
+    icon: 'ant-design:youtube-filled',
+    color: '#FF0000',
   },
 ];
+
 
 // ----------------------------------------------------------------------
 
@@ -169,6 +178,15 @@ export const _pricingPlans = [
     ],
     labelAction: 'Choose premium',
   },
+];
+
+
+export const _categories = [
+  { label: 'Marketing', path: '' },
+  { label: 'Community', path: '' },
+  { label: 'Tutorials', path: '' },
+  { label: 'Business', path: '' },
+  { label: 'Management', path: '' },
 ];
 
 // ----------------------------------------------------------------------

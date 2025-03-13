@@ -92,8 +92,8 @@ export default function FeaturedPost({ posts }: Props) {
               key={post.id}
               alt="post cover"
               src={post.coverUrl}
-              overlay={`linear-gradient(to bottom, ${alpha(theme.palette.common.black, 0)} 0%, ${theme.palette.common.black
-                } 75%)`}
+              // overlay={`linear-gradient(to bottom, ${alpha(theme.palette.common.black, 0)} 0%, ${theme.palette.common.black
+              //   } 75%)`}
               sx={{ position: 'absolute', top: 0, width: 1, height: 1 }}
             />
           )
