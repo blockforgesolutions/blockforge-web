@@ -22,6 +22,7 @@ export type ImageRatioType = BaseRatioType | { [key: string]: string };
 
 export type ImageProps = BoxProps &
   LazyLoadImageProps & {
+    overlay?: string;
     ratio?: ImageRatioType;
     disabledEffect?: boolean;
     slotProps?: {

@@ -42,6 +42,7 @@ export const Image = forwardRef<HTMLSpanElement, ImageProps>(
       alt,
       src,
       ratio,
+      overlay,
       delayTime,
       threshold,
       beforeLoad,
@@ -101,8 +102,8 @@ export const Image = forwardRef<HTMLSpanElement, ImageProps>(
         sx={{ ...(!!ratio && { width: 1 }), ...sx }}
         {...other}
       >
+        {overlay && <Overlay className={imageClasses.overlay} sx={{ background: overlay }} />}
         {slotProps?.overlay && <Overlay className={imageClasses.overlay} sx={slotProps?.overlay} />}
-
         {content}
       </ImageWrapper>
     );
