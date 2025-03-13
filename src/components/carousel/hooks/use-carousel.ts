@@ -1,84 +1,82 @@
-import type { EmblaPluginType } from 'embla-carousel';
+/* eslint-disable import/no-extraneous-dependencies */
+import Carousel, { Settings } from 'react-slick';
+import { useRef, useState, useCallback } from 'react';
 
-import { useMemo } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-
-import { useThumbs } from './use-thumbs';
-import { useCarouselDots } from './use-carousel-dots';
-import { useParallax } from './use-carousel-parallax';
-import { useCarouselArrows } from './use-carousel-arrows';
-import { useCarouselProgress } from './use-carousel-progress';
-import { useCarouselAutoPlay } from './use-carousel-auto-play';
-import { useCarouselAutoScroll } from './use-carousel-auto-scroll';
-
-import type { CarouselOptions, UseCarouselReturn } from '../types';
+import { useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export const useCarousel = (
-  options?: CarouselOptions,
-  plugins?: EmblaPluginType[]
-): UseCarouselReturn => {
-  const [mainRef, mainApi] = useEmblaCarousel(options, plugins);
+type ReturnType = {
+  currentIndex: number;
+  nav: Carousel | undefined;
+  carouselSettings: Settings;
+  carouselRef: React.MutableRefObject<Carousel | null>;
+  //
+  onPrev: VoidFunction;
+  onNext: VoidFunction;
+  onSetNav: VoidFunction;
+  onTogo: (index: number) => void;
+  //
+  setNav: React.Dispatch<React.SetStateAction<Carousel | undefined>>;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+};
 
-  const { disablePrev, disableNext, onClickPrev, onClickNext } = useCarouselArrows(mainApi);
+export default function useCarousel(props?: Settings): ReturnType {
+  const theme = useTheme();
 
-  const pluginNames = plugins?.map((plugin) => plugin.name);
+  const carouselRef = useRef<Carousel | null>(null);
 
-  const _dots = useCarouselDots(mainApi);
+  const [currentIndex, setCurrentIndex] = useState(props?.initialSlide || 0);
 
-  const _autoplay = useCarouselAutoPlay(mainApi);
+  const [nav, setNav] = useState<Carousel | undefined>(undefined);
 
-  const _autoScroll = useCarouselAutoScroll(mainApi);
+  const rtl = theme.direction === 'rtl';
 
-  const _progress = useCarouselProgress(mainApi);
+  const carouselSettings = {
+    arrows: false,
+    dots: !!props?.customPaging,
+    rtl,
+    beforeChange: (current: number, next: number) => setCurrentIndex(next),
+    ...props,
+    fade: !!(props?.fade && !rtl),
+  };
 
-  const _thumbs = useThumbs(mainApi, options?.thumbs);
-
-  useParallax(mainApi, options?.parallax);
-
-  const controls = useMemo(() => {
-    if (pluginNames?.includes('autoplay')) {
-      return {
-        onClickPrev: () => _autoplay.onClickAutoplay(onClickPrev),
-        onClickNext: () => _autoplay.onClickAutoplay(onClickNext),
-      };
+  const onSetNav = useCallback(() => {
+    if (carouselRef.current) {
+      setNav(carouselRef.current);
     }
-    if (pluginNames?.includes('autoScroll')) {
-      return {
-        onClickPrev: () => _autoScroll.onClickAutoplay(onClickPrev),
-        onClickNext: () => _autoScroll.onClickAutoplay(onClickNext),
-      };
+  }, []);
+
+  const onPrev = useCallback(() => {
+    if (carouselRef.current) {
+      carouselRef.current.slickPrev();
     }
-    return {
-      onClickPrev,
-      onClickNext,
-    };
-  }, [_autoScroll, _autoplay, onClickNext, onClickPrev, pluginNames]);
+  }, []);
+
+  const onNext = useCallback(() => {
+    if (carouselRef.current) {
+      carouselRef.current.slickNext();
+    }
+  }, []);
+
+  const onTogo = useCallback((index: number) => {
+    if (carouselRef.current) {
+      carouselRef.current.slickGoTo(index);
+    }
+  }, []);
 
   return {
-    options: {
-      ...options,
-      ...mainApi?.internalEngine().options,
-    },
-    pluginNames,
-    mainRef,
-    mainApi,
-    // arrows
-    arrows: {
-      disablePrev,
-      disableNext,
-      onClickPrev: controls.onClickPrev,
-      onClickNext: controls.onClickNext,
-    },
-    // dots
-    dots: _dots,
-    // thumbs
-    thumbs: _thumbs,
-    // progress
-    progress: _progress,
-    // autoplay
-    autoplay: _autoplay,
-    autoScroll: _autoScroll,
+    nav,
+    carouselRef,
+    currentIndex,
+    carouselSettings,
+    //
+    onPrev,
+    onNext,
+    onTogo,
+    onSetNav,
+    //
+    setNav,
+    setCurrentIndex,
   };
-};
+}
