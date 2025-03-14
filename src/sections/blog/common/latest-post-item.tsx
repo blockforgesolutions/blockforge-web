@@ -42,8 +42,8 @@ export default function LatestPostItem({ post }: Props) {
           src={post.coverUrl}
           alt={post.title}
           ratio="3/4"
-          // overlay={`linear-gradient(to top, ${alpha(theme.palette.common.black, 0)} 0%, ${theme.palette.common.black
-          //   } 75%)`}
+          overlay={`linear-gradient(to top, ${alpha(theme.palette.common.black, 0)} 0%, ${theme.palette.common.black
+            } 75%)`}
         />
       </m.div>
 

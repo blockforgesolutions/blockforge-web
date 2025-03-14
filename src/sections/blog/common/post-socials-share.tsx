@@ -6,14 +6,16 @@ import Typography from '@mui/material/Typography';
 import { _socials } from 'src/_mock';
 
 import { Iconify } from 'src/components/iconify';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
 export default function PostSocialsShare() {
+  const { t } = useTranslate('blog');
   return (
     <Stack direction="row" sx={{ mt: 5 }}>
       <Typography variant="subtitle2" sx={{ mt: 0.75, mr: 1.5 }}>
-        Share:
+        {t("Share")}:
       </Typography>
 
       <Stack direction="row" alignItems="center" flexWrap="wrap">

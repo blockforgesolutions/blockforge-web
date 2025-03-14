@@ -17,23 +17,27 @@ import { paths } from 'src/routes/paths';
 
 import { fDate } from 'src/utils/format-time';
 
+import { useTranslate } from 'src/locales';
 import { _socials, blogPosts, _marketingPosts } from 'src/_mock';
 
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
-import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 import Markdown from 'src/components/markdown/markdown';
+import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
+
 import PostTags from './common/post-tags';
-import PostSocialsShare from './common/post-socials-share';
 import PostAuthor from './common/post-author';
 import LatestPosts from './common/latest-posts';
+import PostSocialsShare from './common/post-socials-share';
 
 
 // ----------------------------------------------------------------------
 
 export default function BlogPostView() {
-  const { title, description, duration, createdAt, author, favorited, heroUrl, tags, content } =
+  const { title, description, duration, createdAt, author, favorited, heroUrl, tags, content, titleTr, descriptionTr, contentTr } =
     blogPosts[0];
+
+  const { currentLang } = useTranslate();
 
   const formattedPosts = _marketingPosts.map((post) => ({
     ...post,
@@ -89,9 +93,9 @@ export default function BlogPostView() {
               </Typography>
 
               <Typography variant="h2" component="h1">
-                {title}
+                {currentLang.value === "en" ? title : titleTr}
               </Typography>
-              <Typography variant="h5">{description}</Typography>
+              <Typography variant="h5">{currentLang.value === "en" ? description : descriptionTr}</Typography>
             </Stack>
 
             <Divider />
@@ -122,7 +126,7 @@ export default function BlogPostView() {
 
             <Divider sx={{ mb: 6 }} />
 
-            <Markdown content={content} firstLetter />
+            <Markdown content={currentLang.value === "en" ? content : contentTr} firstLetter />
 
             {tags.length && <PostTags tags={tags} />}
 

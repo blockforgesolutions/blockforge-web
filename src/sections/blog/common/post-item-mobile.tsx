@@ -3,6 +3,8 @@ import Stack from '@mui/material/Stack';
 
 import { fDate } from 'src/utils/format-time';
 
+import { useTranslate } from 'src/locales';
+
 import { Image } from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
 
@@ -18,6 +20,7 @@ type Props = {
 };
 
 export default function PostItemMobile({ post, onSiderbar }: Props) {
+  const { currentLang } = useTranslate();
   return (
     <Stack
       spacing={2}
@@ -38,7 +41,7 @@ export default function PostItemMobile({ post, onSiderbar }: Props) {
 
       <Stack spacing={onSiderbar ? 0.5 : 1}>
         <Link color="inherit">
-          <TextMaxLine variant={onSiderbar ? 'subtitle2' : 'h6'}>{post.title}</TextMaxLine>
+          <TextMaxLine variant={onSiderbar ? 'subtitle2' : 'h6'}>{currentLang.value === "en" ? post.title : post.titleTr}</TextMaxLine>
         </Link>
 
         <PostTimeBlock createdAt={fDate(post.createdAt) || ""} duration={post.duration} />

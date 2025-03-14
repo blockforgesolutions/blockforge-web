@@ -7,10 +7,13 @@ import { RouterLink } from 'src/routes/components';
 
 import { fDate } from 'src/utils/format-time';
 
+import { useTranslate } from 'src/locales';
 
-import { IBlogPostProps } from 'src/types/blog';
 import { Image } from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
+
+import { IBlogPostProps } from 'src/types/blog';
+
 import PostTimeBlock from './common/post-time-block';
 
 
@@ -21,6 +24,7 @@ type Props = {
 };
 
 export default function FeaturedPostItem({ post }: Props) {
+  const { currentLang } = useTranslate();
   return (
     <Stack
       direction={{
@@ -43,11 +47,11 @@ export default function FeaturedPostItem({ post }: Props) {
           <PostTimeBlock createdAt={fDate(post.createdAt) ?? ''} duration={post.duration ?? 'Unknown'} />
 
           <Link component={RouterLink} href={paths.post.details(post.title)} color="inherit" variant="h3">
-            {post.title}
+            {currentLang.value === "en" ? post.title : post.titleTr}
           </Link>
 
           <TextMaxLine line={3} variant="body2" sx={{ color: 'text.secondary' }}>
-            {post.description}
+            {currentLang.value === "en" ? post.description : post.descriptionTr}
           </TextMaxLine>
         </Stack>
 

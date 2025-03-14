@@ -13,6 +13,8 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // import { _socials } from 'src/_mock';
 
 
+import { useTranslate } from 'src/locales';
+
 import { Iconify } from 'src/components/iconify';
 
 import { IAuthorProps } from 'src/types/author';
@@ -40,7 +42,7 @@ export default function PostSidebar({
   ...other
 }: Props) {
   const mdUp = useResponsive('up', 'md');
-
+  const { t } = useTranslate("blog");
   const renderAuthor = author && (
     <Stack spacing={2} direction="row" sx={{ mb: { md: 5 } }}>
       <Avatar src={author.avatarUrl} sx={{ width: 64, height: 64 }} />
@@ -66,7 +68,7 @@ export default function PostSidebar({
   const renderCategories = categories && (
     <Stack spacing={1}>
       <Typography variant="h5" gutterBottom>
-        Categories
+        {t("Categories")}
       </Typography>
 
       {categories.map((category) => (
@@ -91,7 +93,7 @@ export default function PostSidebar({
 
   const renderRecentPosts = recentPosts && (
     <Stack spacing={3}>
-      <Typography variant="h5">Recent Posts</Typography>
+      <Typography variant="h5">{t("Recent Posts")}</Typography>
 
       {recentPosts.list.map((post) => (
         <PostItemMobile key={post.id} post={post} onSiderbar />
@@ -101,11 +103,11 @@ export default function PostSidebar({
 
   const renderPopularTags = popularTags && (
     <Stack spacing={3}>
-      <Typography variant="h5">Tags</Typography>
+      <Typography variant="h5">{t("Tags")}</Typography>
 
       <Stack direction="row" flexWrap="wrap" spacing={1}>
         {popularTags.map((tag) => (
-          <Chip key={tag} label={tag} variant="soft" size="small" onClick={() => {}} />
+          <Chip key={tag} label={tag} variant="soft" size="small" onClick={() => { }} />
         ))}
       </Stack>
     </Stack>

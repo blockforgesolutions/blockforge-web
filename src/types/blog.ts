@@ -13,14 +13,18 @@ export type IBlogCategoryProps = {
 export type IBlogPostProps = {
   id: string;
   title: string;
+  titleTr? : string;
   heroUrl: string;
   tags?: string[];
   createdAt: Date;
   coverUrl: string;
   duration: string;
+  durationTr?: string;
   content: string;
+  contentTr?:string;
   favorited: boolean;
   description: string;
+  descriptionTr?: string;
   author: {
     name: string;
     avatarUrl: string;
