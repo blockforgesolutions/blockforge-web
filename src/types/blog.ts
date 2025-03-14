@@ -13,6 +13,7 @@ export type IBlogCategoryProps = {
 export type IBlogPostProps = {
   id: string;
   title: string;
+  slug?:string;
   titleTr? : string;
   heroUrl: string;
   tags?: string[];

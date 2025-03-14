@@ -1,5 +1,6 @@
 'use client';
 
+import { useParams } from 'next/navigation';
 import { useState, useCallback } from 'react';
 
 import Stack from '@mui/material/Stack';
@@ -18,7 +19,7 @@ import { paths } from 'src/routes/paths';
 import { fDate } from 'src/utils/format-time';
 
 import { useTranslate } from 'src/locales';
-import { _socials, blogPosts, _marketingPosts } from 'src/_mock';
+import { _socials, blogPosts } from 'src/_mock';
 
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
@@ -34,15 +35,13 @@ import PostSocialsShare from './common/post-socials-share';
 // ----------------------------------------------------------------------
 
 export default function BlogPostView() {
+  const { blogTitle } = useParams();
+
   const { title, description, duration, createdAt, author, favorited, heroUrl, tags, content, titleTr, descriptionTr, contentTr } =
-    blogPosts[0];
+    blogPosts.find((p) => p.slug === blogTitle) ?? blogPosts[0];
 
   const { currentLang } = useTranslate();
 
-  const formattedPosts = _marketingPosts.map((post) => ({
-    ...post,
-    createdAt: new Date(post.createdAt),
-  }));
 
   const [favorite, setFavorite] = useState(favorited);
 

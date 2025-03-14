@@ -107,6 +107,7 @@ export const blogPosts = [
   {
     id: "1",
     title: "The Rise of Web3: A Decentralized Future",
+    slug:"the-rise-of-web3-a-decentralized-future",
     titleTr: "Web3'ün Yükselişi: Merkeziyetsiz Bir Gelecek",
     heroUrl: "https://images.mirror-media.xyz/publication-images/WQkwZpEKsnnM-n-vJ8ss8.jpeg?height=1086&width=2172",
     tags: ["Web3", "Blockchain", "Decentralization"],
@@ -165,6 +166,7 @@ export const blogPosts = [
   {
     id: "2",
     title: "Smart Contracts: The Backbone of Web3",
+    slug:"smart-contracts-the-backbone-of-web3",
     titleTr: "Akıllı Sözleşmeler: Web3'ün Belkemiği",
     heroUrl: "https://www.cryptojobs.com/blog/wp-content/uploads/2023/11/Smart-Contracts-101-Understanding-the-Backbone-of-Web3.jpg",
     tags: ["Web3", "Smart Contracts", "Ethereum"],
@@ -221,6 +223,7 @@ export const blogPosts = [
   {
     id: "3",
     title: "Decentralized Finance (DeFi): The Future of Banking",
+    slug:"decentralized-finance-defi-the-future-of-banking",
     titleTr: "Merkeziyetsiz Finans (DeFi): Bankacılığın Geleceği",
     heroUrl: "https://cdn.prod.website-files.com/64ad09022ca618712b22c33f/6613f80af6d53f05529366e0_The%20Future%20of%20Banking%20for%20Web3%20Businesses%20Header-IMAGE.png",
     tags: ["Web3", "DeFi", "Finance"],
@@ -277,6 +280,7 @@ export const blogPosts = [
   {
     id: "4",
     title: "NFTs: More Than Just Digital Art",
+    slug: "nfts-more-than-just-digital-art",
     titleTr: "NFT'ler: Sadece Dijital Sanattan Daha Fazlası",
     heroUrl: "https://storage.dogasigorta.com/app-1433/blogs-images/117564058_nft_thumb1.jpeg",
     tags: ["Web3", "NFT", "Crypto"],
