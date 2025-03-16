@@ -42,6 +42,8 @@ export function Footer({ layoutQuery, sx }: FooterProps) {
         { name: 'about', href: paths.about },
         { name: 'services', href: paths.contact },
         { name: 'contact', href: paths.contact },
+        { name: 'web3-academy', href: paths.post.root },
+        { name: 'career', href: paths.career },
       ],
     },
     {
