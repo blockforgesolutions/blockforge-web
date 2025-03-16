@@ -98,14 +98,11 @@ export default function BlogPostView() {
             </Stack>
 
             <Divider />
-            <Stack direction="row" justifyContent="space-between" spacing={1.5} sx={{ py: 3 }}>
+            <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={1.5} sx={{ py: 3 }}>
               <Avatar src={author.avatarUrl} sx={{ width: 48, height: 48 }} />
 
               <Stack spacing={0.5} flexGrow={1}>
                 <Typography variant="subtitle2">{author.name}</Typography>
-                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                  {fDate(createdAt, 'dd/MM/yyyy p')}
-                </Typography>
               </Stack>
 
               <Stack direction="row" alignItems="center">

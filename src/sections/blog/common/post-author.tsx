@@ -8,6 +8,7 @@ import { _socials } from 'src/_mock';
 import { Iconify } from 'src/components/iconify';
 
 import { IAuthorProps } from 'src/types/author';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
@@ -20,6 +21,7 @@ type Props = {
 
 export default function PostAuthor({ author }: Props) {
   const { name, avatarUrl } = author;
+  const { currentLang } = useTranslate();
 
   return (
     <Stack
@@ -45,7 +47,7 @@ export default function PostAuthor({ author }: Props) {
 
           <Stack direction="row">
             {_socials.map((social) => (
-              <IconButton key={social.value}>
+              <IconButton key={social.value} href={currentLang.value === "en" ? social.pathBFS : social.pathW3W}>
                 <Iconify icon={social.icon} sx={{ color: social.color }} />
               </IconButton>
             ))}
