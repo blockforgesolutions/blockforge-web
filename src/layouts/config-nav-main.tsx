@@ -17,8 +17,13 @@ export const navData = [
     icon: <Iconify width={22} icon="solar:atom-bold-duotone" />,
   },
   {
-    title: 'Web3-Academy',
+    title: 'web3-academy',
     path: paths.post.root,
+    icon: <Iconify width={22} icon="solar:atom-bold-duotone" />,
+  },
+  {
+    title: 'career',
+    path: paths.career,
     icon: <Iconify width={22} icon="solar:atom-bold-duotone" />,
   },
   {
