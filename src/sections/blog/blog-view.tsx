@@ -1,11 +1,8 @@
 'use client';
 
-import { changeLanguage } from 'i18next';
-
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { useTranslate } from 'src/locales';
 import { _categories, _marketingPosts, _tags, blogPosts } from 'src/_mock';
 
 import BlogPosts from './blog-posts';
@@ -17,17 +14,12 @@ import PostSearchMobile from './common/post-search-mobile';
 // ----------------------------------------------------------------------
 
 export default function BlogView() {
-    const { t, currentLang } = useTranslate();
 
   return (
     <>
       <PostSearchMobile />
 
       <FeaturedPost posts={blogPosts} />
-
-      <button type='button' onClick={() => changeLanguage(currentLang.value === 'en' ? 'tr' : 'en')}>
-        Change Language
-      </button>
 
       <Container
         sx={{
