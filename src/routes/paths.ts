@@ -27,6 +27,7 @@ export const paths = {
     details: (title: string) => `/blog/${paramCase(title)}`,
     demo: { details: `/blog/${paramCase(MOCK_TITLE)}` },
   },
+  career: "/career",
   // AUTH
   auth: {
     amplify: {

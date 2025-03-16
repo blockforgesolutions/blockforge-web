@@ -114,7 +114,7 @@ export function Footer({ layoutQuery, sx }: FooterProps) {
                 <IconButton
                   key={social.label}
                   component="a"
-                  href={social.path}
+                  href={currentLang.value === "en" ? social.pathBFS : social.pathW3W}
                   target="_blank"
                   rel="noopener"
                   color="inherit"
