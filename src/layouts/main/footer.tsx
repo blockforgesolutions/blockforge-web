@@ -22,32 +22,7 @@ import { useTranslate } from '../../locales';
 
 // ----------------------------------------------------------------------
 
-const LINKS = [
-  {
-    headline: 'w3w',
-    children: [
-      { name: 'about', href: paths.about },
-      { name: 'services', href: paths.contact },
-      { name: 'contact', href: paths.contact },
-    ],
-  },
-  {
-    headline: 'legal',
-    children: [
-      { name: 'terms', href: paths.terms },
-      { name: 'privacy', href: paths.privacy },
-    ],
-  },
-  {
-    headline: 'contact',
-    children: [
-      {
-        name: 'info@blockforgesolutions.com',
-        href: 'mailto:info@blockforgesolutions.com'
-      }
-    ]
-  },
-];
+
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +33,41 @@ export type FooterProps = {
 
 export function Footer({ layoutQuery, sx }: FooterProps) {
   const theme = useTheme();
-  const { t } = useTranslate('navbar');
+  const { t, currentLang } = useTranslate('navbar');
+
+  const LINKS = [
+    {
+      headline: 'w3w',
+      children: [
+        { name: 'about', href: paths.about },
+        { name: 'services', href: paths.contact },
+        { name: 'contact', href: paths.contact },
+        { name: 'web3-academy', href: paths.post.root },
+        { name: 'career', href: paths.career },
+      ],
+    },
+    {
+      headline: 'legal',
+      children: [
+        { name: 'terms', href: paths.terms },
+        { name: 'privacy', href: paths.privacy },
+      ],
+    },
+    {
+      headline: 'contact',
+      children: [
+        currentLang.value === 'en'
+          ? {
+            name: 'info@blockforgesolutions.com',
+            href: 'mailto:info@blockforgesolutions.com'
+          }
+          : {
+            name: 'info@web3wanderers.com',
+            href: 'mailto:info@web3wanderers.com'
+          }
+      ],
+    },
+  ];
 
   return (
     <Box component="footer" sx={{ position: 'relative', bgcolor: 'background.default', ...sx }}>
@@ -107,7 +116,7 @@ export function Footer({ layoutQuery, sx }: FooterProps) {
                 <IconButton
                   key={social.label}
                   component="a"
-                  href={social.path}
+                  href={currentLang.value === "en" ? social.pathBFS : social.pathW3W}
                   target="_blank"
                   rel="noopener"
                   color="inherit"

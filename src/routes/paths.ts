@@ -23,10 +23,11 @@ export const paths = {
   privacy: '/privacy',
   terms: '/terms',
   post: {
-    root: `/post`,
-    details: (title: string) => `/post/${paramCase(title)}`,
-    demo: { details: `/post/${paramCase(MOCK_TITLE)}` },
+    root: `/blog`,
+    details: (title: string) => `/blog/${paramCase(title)}`,
+    demo: { details: `/blog/${paramCase(MOCK_TITLE)}` },
   },
+  career: "/career",
   // AUTH
   auth: {
     amplify: {

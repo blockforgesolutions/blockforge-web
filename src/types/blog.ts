@@ -1,51 +1,38 @@
-import type { IDateValue } from './common';
+/* eslint-disable @typescript-eslint/consistent-type-imports */
 
 // ----------------------------------------------------------------------
 
-export type IPostFilters = {
-  publish: string;
+import { IAuthorProps } from "./author";
+import { ISocialLinks } from "./socials";
+
+export type IBlogCategoryProps = {
+  label: string;
+  path: string;
 };
 
-export type IPostHero = {
+export type IBlogPostProps = {
+  id: string;
   title: string;
+  slug?:string;
+  titleTr? : string;
+  heroUrl: string;
+  tags?: string[];
+  createdAt: Date;
   coverUrl: string;
-  createdAt?: IDateValue;
-  author?: { name: string; avatarUrl: string };
-};
-
-export type IPostComment = {
-  id: string;
-  name: string;
-  avatarUrl: string;
-  message: string;
-  postedAt: IDateValue;
-  users: { id: string; name: string; avatarUrl: string }[];
-  replyComment: {
-    id: string;
-    userId: string;
-    message: string;
-    tagUser?: string;
-    postedAt: IDateValue;
-  }[];
-};
-
-export type IPostItem = {
-  id: string;
-  title: string;
-  tags: string[];
-  publish: string;
+  duration: string;
+  durationTr?: string;
   content: string;
-  coverUrl: string;
-  metaTitle: string;
-  totalViews: number;
-  totalShares: number;
+  contentTr?:string;
+  favorited: boolean;
   description: string;
-  totalComments: number;
-  totalFavorites: number;
-  metaKeywords: string[];
-  metaDescription: string;
-  comments: IPostComment[];
-  createdAt: IDateValue;
-  favoritePerson: { name: string; avatarUrl: string }[];
-  author: { name: string; avatarUrl: string };
+  descriptionTr?: string;
+  author: {
+    name: string;
+    avatarUrl: string;
+  };
+  shareLinks?: {
+    facebook: string;
+    twitter: string;
+    linkedin: string;
+  };
 };
