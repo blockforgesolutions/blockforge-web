@@ -1,5 +1,6 @@
+import type { IBlogPostProps } from 'src/types/blog';
+
 import { m } from 'framer-motion';
-import { changeLanguage } from 'i18next';
 
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
@@ -16,8 +17,6 @@ import { useTranslate } from 'src/locales';
 import { Image } from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
 import { varHover, varTranHover } from 'src/components/animate';
-
-import { IBlogPostProps } from 'src/types/blog';
 
 import PostTimeBlock from './common/post-time-block';
 

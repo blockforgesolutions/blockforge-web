@@ -3,7 +3,7 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import { _categories, _marketingPosts, _tags, blogPosts } from 'src/_mock';
+import { _tags, blogPosts, _categories } from 'src/_mock';
 
 import BlogPosts from './blog-posts';
 import FeaturedPost from './featured-blogs';

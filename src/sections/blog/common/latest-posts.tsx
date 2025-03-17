@@ -1,3 +1,5 @@
+import type { IBlogPostProps } from 'src/types/blog';
+
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -13,7 +15,6 @@ import { useResponsive } from 'src/hooks/use-responsive';
 import { Iconify } from 'src/components/iconify';
 import Carousel, { useCarousel, CarouselDots, CarouselArrows } from 'src/components/carousel';
 
-import { IBlogPostProps } from 'src/types/blog';
 import LatestPostItem from './latest-post-item';
 
 

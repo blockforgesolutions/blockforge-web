@@ -1,5 +1,7 @@
+import type { StackProps } from '@mui/material/Stack';
+
 import Box from '@mui/material/Box';
-import Stack, { StackProps } from '@mui/material/Stack';
+import Stack from '@mui/material/Stack';
 
 import { fDate } from 'src/utils/format-time';
 

@@ -1,30 +1,20 @@
 import type { BoxProps } from '@mui/material/Box';
-import type { IDateValue } from 'src/types/common';
 
 import { m } from 'framer-motion';
 
 import Box from '@mui/material/Box';
-import Masonry from '@mui/lab/Masonry';
-import Rating from '@mui/material/Rating';
-import Button from '@mui/material/Button';
-import Avatar from '@mui/material/Avatar';
+import { Divider } from '@mui/material';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import ListItemText from '@mui/material/ListItemText';
 
-import { fDate } from 'src/utils/format-time';
-
-import { _testimonials } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
-import { bgBlur, varAlpha, bgGradient, hideScrollY, stylesMode } from 'src/theme/styles';
-
-import { Iconify } from 'src/components/iconify';
-import { varFade, MotionViewport } from 'src/components/animate';
-import { Image } from 'src/components/image';
 import { useTranslate } from 'src/locales';
-import { Divider } from '@mui/material';
+import { varAlpha, bgGradient, stylesMode, hideScrollY } from 'src/theme/styles';
+
+import { Image } from 'src/components/image';
+import { varFade, MotionViewport } from 'src/components/animate';
 
 // ----------------------------------------------------------------------
 
@@ -32,11 +22,7 @@ export function AboutTestimonials({ sx, ...other }: BoxProps) {
   const { t } = useTranslate('about')
   const theme = useTheme();
 
-  const renderLink = (
-    <Button color="primary" endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}>
-      Read more
-    </Button>
-  );
+
 
   const renderDescription = (
     <Box
@@ -138,53 +124,3 @@ export function AboutTestimonials({ sx, ...other }: BoxProps) {
 
 // ----------------------------------------------------------------------
 
-type TestimonialItemProps = BoxProps & {
-  testimonial: {
-    name: string;
-    content: string;
-    avatarUrl: string;
-    ratingNumber: number;
-    postedDate: IDateValue;
-  };
-};
-
-function TestimonialItem({ testimonial, sx, ...other }: TestimonialItemProps) {
-  const theme = useTheme();
-
-  return (
-    <Box
-      gap={3}
-      display="flex"
-      flexDirection="column"
-      sx={{
-        ...bgBlur({ color: varAlpha(theme.vars.palette.common.whiteChannel, 0.08) }),
-        p: 3,
-        borderRadius: 2,
-        color: 'common.white',
-        ...sx,
-      }}
-      {...other}
-    >
-      <Iconify icon="mingcute:quote-left-fill" width={40} sx={{ opacity: 0.48 }} />
-
-      <Typography variant="body2">{testimonial.content}</Typography>
-
-      <Rating value={testimonial.ratingNumber} readOnly size="small" />
-
-      <Box gap={2} display="flex">
-        <Avatar alt={testimonial.name} src={testimonial.avatarUrl} />
-
-        <ListItemText
-          primary={testimonial.name}
-          secondary={fDate(testimonial.postedDate)}
-          primaryTypographyProps={{ typography: 'subtitle2', mb: 0.5 }}
-          secondaryTypographyProps={{
-            color: 'inherit',
-            typography: 'caption',
-            sx: { opacity: 0.64 },
-          }}
-        />
-      </Box>
-    </Box>
-  );
-}

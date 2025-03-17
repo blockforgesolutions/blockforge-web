@@ -2,18 +2,16 @@ import type { BoxProps } from '@mui/material/Box';
 
 import { m } from 'framer-motion';
 
-import Fab from '@mui/material/Fab';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
 import { CONFIG } from 'src/config-global';
+import { useTranslate } from 'src/locales';
 import { varAlpha } from 'src/theme/styles';
 
 import { Image } from 'src/components/image';
-import { Iconify } from 'src/components/iconify';
 import { varFade, MotionViewport } from 'src/components/animate';
-import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
@@ -32,33 +30,33 @@ export function AboutVision({ sx, ...other }: BoxProps) {
     />
   );
 
-  const renderLogos = (
-    <Box
-      display="flex"
-      flexWrap="wrap"
-      alignItems="center"
-      justifyContent="center"
-      sx={{
-        width: 1,
-        zIndex: 9,
-        bottom: 0,
-        opacity: 0.48,
-        position: 'absolute',
-        py: { xs: 1.5, md: 2.5 },
-      }}
-    >
-      {['ibm', 'lya', 'spotify', 'netflix', 'hbo', 'amazon'].map((logo) => (
-        <Box
-          component={m.img}
-          key={logo}
-          variants={varFade().in}
-          alt={logo}
-          src={`${CONFIG.assetsDir}/assets/icons/brands/ic-brand-${logo}.svg`}
-          sx={{ m: { xs: 1.5, md: 2.5 }, height: { xs: 20, md: 32 } }}
-        />
-      ))}
-    </Box>
-  );
+  // const renderLogos = (
+  //   <Box
+  //     display="flex"
+  //     flexWrap="wrap"
+  //     alignItems="center"
+  //     justifyContent="center"
+  //     sx={{
+  //       width: 1,
+  //       zIndex: 9,
+  //       bottom: 0,
+  //       opacity: 0.48,
+  //       position: 'absolute',
+  //       py: { xs: 1.5, md: 2.5 },
+  //     }}
+  //   >
+  //     {['ibm', 'lya', 'spotify', 'netflix', 'hbo', 'amazon'].map((logo) => (
+  //       <Box
+  //         component={m.img}
+  //         key={logo}
+  //         variants={varFade().in}
+  //         alt={logo}
+  //         src={`${CONFIG.assetsDir}/assets/icons/brands/ic-brand-${logo}.svg`}
+  //         sx={{ m: { xs: 1.5, md: 2.5 }, height: { xs: 20, md: 32 } }}
+  //       />
+  //     ))}
+  //   </Box>
+  // );
 
   return (
     <Box

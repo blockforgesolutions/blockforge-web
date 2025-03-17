@@ -4,9 +4,9 @@ import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 import { _socials } from 'src/_mock';
+import { useTranslate } from 'src/locales';
 
 import { Iconify } from 'src/components/iconify';
-import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 

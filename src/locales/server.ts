@@ -4,7 +4,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { headers, cookies as getCookies } from 'next/headers';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
-import { defaultNS, cookieName, i18nOptions, fallbackLng } from './config-locales';
+import { defaultNS, i18nOptions, fallbackLng } from './config-locales';
 
 import type { LanguageValue } from './config-locales';
 
@@ -28,6 +28,7 @@ export async function detectLanguage() {
 
  */
 export async function detectLanguage() {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const cookies = getCookies();
 
   // Sunucu tarafında hostname'i headers() ile alalım

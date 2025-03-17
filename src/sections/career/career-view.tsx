@@ -1,6 +1,7 @@
 'use client';
 
 import Divider from '@mui/material/Divider';
+
 import CareerHero from './career-hero';
 
 // ----------------------------------------------------------------------

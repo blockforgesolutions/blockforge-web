@@ -1,12 +1,12 @@
+import type { IBlogPostProps } from 'src/types/blog';
+
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import { Image } from 'src/components/image';
-import Carousel, { CarouselArrows, CarouselDots } from 'src/components/carousel';
 import useCarousel from 'src/components/carousel/hooks/use-carousel';
-
-import { IBlogPostProps } from 'src/types/blog';
+import Carousel, { CarouselDots, CarouselArrows } from 'src/components/carousel';
 
 import FeaturedPostItem from './featured-blog-item';
 

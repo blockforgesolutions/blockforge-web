@@ -1,4 +1,5 @@
 import { getServerTranslations } from "src/locales/server";
+
 import BlogPostView from "src/sections/blog/blog-post-view";
 
 export async function generateMetadata() {

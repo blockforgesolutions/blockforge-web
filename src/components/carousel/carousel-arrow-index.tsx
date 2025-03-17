@@ -1,11 +1,13 @@
+import type { Theme, SxProps} from '@mui/material/styles';
+
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { Theme, styled, SxProps, useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 
-
-import { IconifyProps } from '../iconify';
 import { LeftIcon, RightIcon } from './arrow-icons';
+
+import type { IconifyProps } from '../iconify';
 
 // ----------------------------------------------------------------------
 

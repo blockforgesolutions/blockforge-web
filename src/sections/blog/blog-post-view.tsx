@@ -16,19 +16,16 @@ import IconButton from '@mui/material/IconButton';
 
 import { paths } from 'src/routes/paths';
 
-import { fDate } from 'src/utils/format-time';
-
 import { useTranslate } from 'src/locales';
 import { _socials, blogPosts } from 'src/_mock';
 
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
-import Markdown from 'src/components/markdown/markdown';
+import { Markdown } from 'src/components/markdown/markdown';
 import { CustomBreadcrumbs } from 'src/components/custom-breadcrumbs';
 
 import PostTags from './common/post-tags';
 import PostAuthor from './common/post-author';
-import LatestPosts from './common/latest-posts';
 import PostSocialsShare from './common/post-socials-share';
 
 
@@ -37,7 +34,7 @@ import PostSocialsShare from './common/post-socials-share';
 export default function BlogPostView() {
   const { blogTitle } = useParams();
 
-  const { title, description, duration, createdAt, author, favorited, heroUrl, tags, content, titleTr, descriptionTr, contentTr } =
+  const { title, description, duration, author, favorited, heroUrl, tags, content, titleTr, descriptionTr, contentTr } =
     blogPosts.find((p) => p.slug === blogTitle) ?? blogPosts[0];
 
   const { currentLang } = useTranslate();

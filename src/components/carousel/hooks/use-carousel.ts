@@ -1,38 +1,37 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import Carousel, { Settings } from 'react-slick';
+import type Carousel from 'react-slick';
+import type { Settings } from 'react-slick';
+
 import { useRef, useState, useCallback } from 'react';
 
 import { useTheme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-type ReturnType = {
-  currentIndex: number;
-  nav: Carousel | undefined;
-  carouselSettings: Settings;
-  carouselRef: React.MutableRefObject<Carousel | null>;
-  //
-  onPrev: VoidFunction;
-  onNext: VoidFunction;
-  onSetNav: VoidFunction;
-  onTogo: (index: number) => void;
-  //
-  setNav: React.Dispatch<React.SetStateAction<Carousel | undefined>>;
-  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
-};
+// type ReturnType = {
+//   currentIndex: number;
+//   nav: Carousel | undefined;
+//   carouselSettings: Settings;
+//   carouselRef: React.MutableRefObject<Carousel | null>;
+//   //
+//   onPrev: VoidFunction;
+//   onNext: VoidFunction;
+//   onSetNav: VoidFunction;
+//   onTogo: (index: number) => void;
+//   //
+//   setNav: React.Dispatch<React.SetStateAction<Carousel | undefined>>;
+//   setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
+// };
 
-export default function useCarousel(props?: Settings): ReturnType {
+export default function useCarousel(props?: Settings, p0?: unknown) {
   const theme = useTheme();
 
   const carouselRef = useRef<Carousel | null>(null);
-
   const [currentIndex, setCurrentIndex] = useState(props?.initialSlide || 0);
-
   const [nav, setNav] = useState<Carousel | undefined>(undefined);
-
   const rtl = theme.direction === 'rtl';
 
-  const carouselSettings = {
+  const carouselSettings: Settings = {
     arrows: false,
     dots: !!props?.customPaging,
     rtl,
@@ -75,8 +74,19 @@ export default function useCarousel(props?: Settings): ReturnType {
     onNext,
     onTogo,
     onSetNav,
-    //
     setNav,
     setCurrentIndex,
+    //
+    arrows: {
+      onPrev,
+      onNext,
+    },
+    dots: {
+      scrollSnaps: Array.from({ length: props?.slidesToShow || 1 }, (_, i) => i),
+      selectedIndex: currentIndex,
+      onClickDot: (index: number) => onTogo(index),
+    },
+    options: carouselSettings,
   };
 }
+

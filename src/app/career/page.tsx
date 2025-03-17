@@ -1,4 +1,5 @@
 import { getServerTranslations } from "src/locales/server";
+
 import CareerView from "src/sections/career/career-view";
 
 export async function generateMetadata() {
