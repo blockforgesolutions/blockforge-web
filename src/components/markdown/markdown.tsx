@@ -1,18 +1,9 @@
 import './code-highlight-block.css';
-import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw';
-import rehypeHighlight from 'rehype-highlight';
 
-import Link from '@mui/material/Link';
-import { SxProps } from '@mui/material';
-import { Theme } from '@mui/material/styles';
+import type { SxProps } from '@mui/material';
+import type { Theme } from '@mui/material/styles';
 
-import { isExternalLink } from 'src/routes/utils';
-import { RouterLink } from 'src/routes/components';
-
-import { Image } from '../image';
 import StyledMarkdown from './styles';
-import { htmlToMarkdown, isMarkdownContent } from './html-to-markdown';
 
 
 // ----------------------------------------------------------------------
@@ -23,7 +14,7 @@ type Props = {
   sx?: SxProps<Theme>;
 };
 
-export default function Markdown({ content, firstLetter = false, sx }: Props) {
+export function Markdown({ content, firstLetter = false, sx }: Props) {
   return (
     <StyledMarkdown
       firstLetter={firstLetter}

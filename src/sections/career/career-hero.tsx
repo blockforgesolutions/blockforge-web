@@ -1,24 +1,16 @@
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import { alpha, styled } from '@mui/material/styles';
 
-import { fShortenNumber } from 'src/utils/format-number';
-import { Image } from 'src/components/image';
 import { useTranslate } from 'src/locales';
 import { bgGradient } from 'src/theme/styles';
 
-// ----------------------------------------------------------------------
+import { Image } from 'src/components/image';
 
-const SUMMARY = [
-  { name: 'Projects Completed', number: 50 },
-  { name: 'Happy Clients', number: 30 },
-  { name: 'Partners', number: 10 },
-  { name: 'Team Members', number: 15 },
-];
 
 // ----------------------------------------------------------------------
 

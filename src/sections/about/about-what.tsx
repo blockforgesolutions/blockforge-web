@@ -10,7 +10,7 @@ import { Divider, useTheme } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import LinearProgress from '@mui/material/LinearProgress';
 
-import { fPercent } from 'src/utils/format-number';
+import { paths } from 'src/routes/paths';
 
 import { CONFIG } from 'src/config-global';
 import { useTranslate } from 'src/locales';
@@ -19,7 +19,6 @@ import { varAlpha, stylesMode } from 'src/theme/styles';
 import { Image } from 'src/components/image';
 import { Iconify } from 'src/components/iconify';
 import { varFade, AnimateBorder, MotionViewport } from 'src/components/animate';
-import { paths } from 'src/routes/paths';
 
 // ----------------------------------------------------------------------
 

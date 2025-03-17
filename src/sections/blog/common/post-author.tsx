@@ -4,11 +4,10 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
 import { _socials } from 'src/_mock';
+import { useTranslate } from 'src/locales';
 
 import { Iconify } from 'src/components/iconify';
 
-import { IAuthorProps } from 'src/types/author';
-import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 

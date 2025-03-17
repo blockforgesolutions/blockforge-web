@@ -1,10 +1,10 @@
 import type { BoxProps } from '@mui/material';
 
+import Link from 'next/link';
 import { useMemo } from 'react';
 import { m } from 'framer-motion';
 
 import { Box, Card, Stack, Button, Container, Typography } from '@mui/material';
-import Link from 'next/link';
 
 import { paths } from 'src/routes/paths';
 

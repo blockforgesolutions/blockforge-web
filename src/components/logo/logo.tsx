@@ -5,13 +5,13 @@ import type { BoxProps } from '@mui/material/Box';
 import { forwardRef } from 'react';
 
 import Box from '@mui/material/Box';
+import Typography from "@mui/material/Typography";
 
 import { RouterLink } from 'src/routes/components';
 
 import { CONFIG } from 'src/config-global';
 import { useTranslate } from 'src/locales';
 
-import Typography from "@mui/material/Typography";
 import { logoClasses } from './classes';
 
 // ----------------------------------------------------------------------

@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import { stylesMode } from 'src/theme/styles';
 
 import { varFade } from 'src/components/animate';
+
 import {useTranslate} from "../../../locales";
 
 // ----------------------------------------------------------------------

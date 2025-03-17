@@ -9,12 +9,10 @@ import Typography from '@mui/material/Typography';
 import { CONFIG } from 'src/config-global';
 
 import { varFade, AnimateText, MotionContainer, animateTextClasses } from 'src/components/animate';
-import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
 export function AboutHero({ sx, ...other }: BoxProps) {
-   const { t } = useTranslate('about');
 
   return (
     <Box

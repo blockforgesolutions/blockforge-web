@@ -1,7 +1,8 @@
+import type { IBlogPostProps } from 'src/types/blog';
+
 import Box from '@mui/material/Box';
 import Pagination, { paginationClasses } from '@mui/material/Pagination';
 
-import { IBlogPostProps } from 'src/types/blog';
 import BlogPostItem from './blog-post-item';
 
 

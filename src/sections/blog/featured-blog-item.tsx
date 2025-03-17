@@ -1,3 +1,5 @@
+import type { IBlogPostProps } from 'src/types/blog';
+
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Avatar from '@mui/material/Avatar';
@@ -11,8 +13,6 @@ import { useTranslate } from 'src/locales';
 
 import { Image } from 'src/components/image';
 import TextMaxLine from 'src/components/text-max-line';
-
-import { IBlogPostProps } from 'src/types/blog';
 
 import PostTimeBlock from './common/post-time-block';
 

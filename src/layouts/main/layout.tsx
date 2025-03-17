@@ -6,11 +6,7 @@ import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import { useTheme } from '@mui/material/styles';
 
-import { usePathname } from 'src/routes/hooks';
-
 import { useBoolean } from 'src/hooks/use-boolean';
-
-import { allLangs } from 'src/locales';
 
 import { Logo } from 'src/components/logo';
 
@@ -23,7 +19,6 @@ import { LayoutSection } from '../core/layout-section';
 import { HeaderSection } from '../core/header-section';
 import ThemeSwitcher from '../components/theme-switcher';
 import { navData as mainNavData } from '../config-nav-main';
-import { LanguagePopover } from '../components/language-popover';
 
 import type { NavMainProps } from './nav/types';
 
@@ -43,11 +38,7 @@ export type MainLayoutProps = {
 export function MainLayout({ sx, data, children, header }: MainLayoutProps) {
   const theme = useTheme();
 
-  const pathname = usePathname();
-
   const mobileNavOpen = useBoolean();
-
-  const homePage = pathname === '/';
 
   const layoutQuery: Breakpoint = 'md';
 
