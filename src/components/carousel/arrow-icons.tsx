@@ -1,5 +1,8 @@
-import { IconifyIcon } from '@iconify/react';
-import { Iconify, IconifyProps } from '../iconify';
+import type { IconifyIcon } from '@iconify/react';
+
+import { Iconify } from '../iconify';
+
+import type { IconifyProps } from '../iconify';
 
 // ----------------------------------------------------------------------
 

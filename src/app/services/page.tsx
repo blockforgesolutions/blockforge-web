@@ -2,8 +2,6 @@ import { getServerTranslations } from 'src/locales/server';
 
 import { ServicesView } from 'src/sections/services/view';
 
-import { ComingSoonView } from '../../sections/coming-soon/view';
-
 // ----------------------------------------------------------------------
 
 export async function generateMetadata() {

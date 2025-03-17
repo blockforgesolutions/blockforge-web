@@ -7,8 +7,7 @@ import { RouterLink } from 'src/routes/components';
 import { maxLine } from 'src/theme/styles';
 
 import { Image } from '../../image';
-import {
-  Carousel,
+import Carousel, {
   useCarousel,
   CarouselDotButtons,
   CarouselArrowBasicButtons,
@@ -23,14 +22,21 @@ export function MenuCarousel({ slides, displayCount = 8, sx }: MenuCarouselProps
 
   return (
     <Stack sx={{ position: 'relative', pt: 2, ...sx }}>
-      <Carousel carousel={carousel}>
+      <Carousel>
         {slides.map((item) => (
           <CarouselItem key={item.name} item={item} />
         ))}
       </Carousel>
 
       <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mt: 2 }}>
-        <CarouselArrowBasicButtons {...carousel.arrows} options={carousel.options} />
+        <CarouselArrowBasicButtons
+          {...carousel.arrows}
+          disablePrev={carousel.currentIndex === 0}
+          disableNext={carousel.currentIndex === slides.length - 1}
+          onClickPrev={carousel.arrows.onPrev}
+          onClickNext={carousel.arrows.onNext}
+          options={carousel.options}
+        />
         <CarouselDotButtons
           scrollSnaps={carousel.dots.scrollSnaps}
           selectedIndex={carousel.dots.selectedIndex}

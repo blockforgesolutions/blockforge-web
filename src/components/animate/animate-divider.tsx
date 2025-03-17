@@ -1,4 +1,4 @@
-import { Box, Divider, styled } from '@mui/material';
+import { Box, styled, Divider } from '@mui/material';
 
 const AnimatedDivider = styled(Divider)(({ theme }) => ({
   marginY: theme.spacing(2),

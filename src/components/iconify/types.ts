@@ -3,4 +3,4 @@ import type { BoxProps } from '@mui/material/Box';
 
 // ----------------------------------------------------------------------
 
-export type IconifyProps = BoxProps & IconProps | string;
+export type IconifyProps = BoxProps & IconProps;

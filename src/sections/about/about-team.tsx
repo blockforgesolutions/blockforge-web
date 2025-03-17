@@ -8,7 +8,6 @@ import Card from '@mui/material/Card';
 import { useTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
 import { paths } from 'src/routes/paths';
@@ -21,7 +20,6 @@ import { varAlpha } from 'src/theme/styles';
 import { Iconify } from 'src/components/iconify';
 import { SvgColor } from 'src/components/svg-color';
 import { varFade, AnimateBorder, MotionViewport } from 'src/components/animate';
-import { Carousel, useCarousel, CarouselArrowFloatButtons } from 'src/components/carousel';
 
 // ----------------------------------------------------------------------
 
@@ -61,11 +59,6 @@ const competencies = [
 export function AboutTeam({ sx, ...other }: BoxProps) {
   const { t } = useTranslate('about');
 
-  const carousel = useCarousel({
-    align: 'start',
-    slideSpacing: '24px',
-    slidesToShow: { xs: 1, sm: 2, md: 3, lg: 4 },
-  });
 
   return (
     <Box component="section" sx={{ overflow: 'hidden', ...sx }} {...other}>
